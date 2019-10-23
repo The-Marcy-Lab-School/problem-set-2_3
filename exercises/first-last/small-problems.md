@@ -72,19 +72,20 @@
 
 8. Write a describeAge function that takes a parameter age (which will always be a positive integer) and does the following:
 
-    If the age is 12 or lower, it returns `"You're a(n) kid"`
-    If the age is anything between 13 and 17 (inclusive), it returns `"You're a(n) teenager"`
-    If the age is anything between 18 and 64 (inclusive), it return `"You're a(n) adult"`
+    If the age is 12 or lower, it returns `"You're a kid"`
+    If the age is anything between 13 and 17 (inclusive), it returns `"You're a teenager"`
+    If the age is anything between 18 and 64 (inclusive), it return `"You're an adult"`
     If the age is 65 or above, it return `"You're an elderly"`
     Your goal is to write this function using as few lines of code as possible. Up for a challenge? This function can be written in one-line using ternary operator(s) 😳.
 
     Examples:
     ```javascript
-    describeAge(11); // "You're a(n) kid"
-    describeAge(13); // "You're a(n) teenager"
-    describeAge(19); // "You're a(n) adult"
-    describeAge(64); // "You're a(n) adult"
-    describeAge(64); // "You're a(n) adult"
+    describeAge(11); // "You're a kid"
+    describeAge(13); // "You're a teenager"
+    describeAge(19); // "You're an adult"
+    describeAge(64); // "You're an adult"
+    describeAge(64); // "You're an adult"
+    describeAge(99); // "You're an elderly"
     ```
 
 
