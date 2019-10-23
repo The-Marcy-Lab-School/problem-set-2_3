@@ -8,5 +8,3 @@
 3. Define _hoisting_. What impact does hoisting have on the way that we structure our JavaScript programs?
 
 4. Which type of functions are hoisted? Which type are not?
-
-
