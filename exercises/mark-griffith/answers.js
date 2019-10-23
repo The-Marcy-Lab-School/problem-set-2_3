@@ -1,33 +1,33 @@
 // Question 1
 function greet(greet) {
-  console.log(`Good Morning ${greet}!`);
+  return `Good morning, ${greet}!`;
 }
 
 // Question 2
 function logOddNumbers() {
     let num = 1;
     while(num<=99){
-      if(num % 2 === 0){
-        num++
+      if(num % 2 == 0){
+        num++;
       }
       else{
         console.log(num);
-        num++
+        num++;
       }
   }
 }
 
 // Question 3
-function area(length,width) {
-    console.log(length * width);
+function area(length, width) {
+    return length * width;
 }
 
 // Question 4
-function otherAngle(first,second) {
+function otherAngle(first, second) {
     let total= 180;
     total -= first + second;
     if(total >= 1){
-      console.log(total);
+      return total;
     }
     else{
       console.log("No");
@@ -43,7 +43,7 @@ function diameterFromArea(area) {
 function totalPrice(price,percent) {
   percent = percent/100;
   percent = price * percent;
-  price = price + percent
+  price = price + percent;
   return price;
 }
 
@@ -52,17 +52,17 @@ function shortLongShort(str1,str2) {
   let string = "";
    if(str1.length > str2.length){
      string = str2 + str1 + str2;
-     return string
+     return string;
    }
    else{
      string = str1 + str2 + str1;
-     return string
+     return string;
    }
 }
 
 // Question 8
 function describeAge(age) {
-  let desc = (age <= 12) ? "You're a kid!" : (age >= 13 && age <= 17) ? "You're a teenager!" : (age >= 18 && age <= 64) ? "You're an adult!" : "You're an elder!";
+  let desc = (age <= 12) ? "You're a kid." : (age >= 13 && age <= 17) ? "You're a teenager." : (age >= 18 && age <= 64) ? "You're an adult." : "You're an elderly.";
   return desc;
 }
 
@@ -78,15 +78,15 @@ function isLeapYear(year) {
 
 // Question 10
 function multisum(num) {
-  let i = 1;
+  let i = 0;
   let sum = 0;
   while(i <= num){
     if( i % 3 ===0 || i % 5 === 0){
-     sum += i 
-     i++
+     sum += i;
+     i++;
   }
   else{
-    i++
+    i++;
   }
 }
   return sum;
@@ -98,24 +98,24 @@ function asciiValue(string) {
   for (let i = 0; i < string.length; i++) {
       str += string.charCodeAt(i);
   }
-  console.log(str);
+  return str;
 }
 
 // Question 12
 function stringy(num) {
   let key = 1;
-  let str = ""
+  let str = "";
   while(key <= num){
     if( key % 2 === 0){
-      str += "0"
-      key++
+      str += "0";
+      key++;
     }
     else{
-      str += "1"
-      key++
+      str += "1";
+      key++;
     }
   }
-  console.log(str);
+  return str;
 }
 
 // Do NOT touch or write anything below this line
