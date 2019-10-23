@@ -70,7 +70,7 @@ test('Question 9: isLeapYear', () => {
 test('Question 10: multisum', () => {
   expect(answers.multisum(13)).toBe(45);
   expect(answers.multisum(17)).toBe(60);
-  expect(answers.multisum(1000)).toBe(235168);
+  expect(answers.multisum(1000)).toBe(234168);
 });
 
 
