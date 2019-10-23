@@ -1,6 +1,6 @@
 // Question 1
 function greet(name) {
-  console.log('Good morning, ' + name+'!');
+  return (`Good morning, ${name}!`);
 }
 
 // Question 2 --change 99 to a parameter for expandability
@@ -50,7 +50,7 @@ function shortLongShort(strngOne, strngTwo) {
 
 // Question 8
 function describeAge(age) {
-  return age < 12 ? "You're a(n) kid": age > 11 && age <18 ? "Your're a(n) teenager": age >= 18 && age <= 64 ? "You're a(n) adult": "You're an elderly";
+  return age < 12 ? "You're a kid.": age > 11 && age <18 ? "You're a teenager.": age >= 18 && age <= 64 ? "You're an adult.": "You're an elderly.";
 }
 
 // // Question 9
