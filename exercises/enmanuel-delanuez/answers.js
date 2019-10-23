@@ -79,8 +79,17 @@ function asciiValue(string) {
 }
 
 // Question 12
-function stringy() {
-
+function stringy(int) {
+  let finalString = '';
+  for (let i = 1; i <= int; i++) {
+    //will use even/odd 'position' to alternate print
+    if (i % 2 === 1) {
+      finalString += '1';
+    } else {
+      finalString += '0';
+    }
+  }
+  return finalString;
 }
 
 // Do NOT touch or write anything below this line
