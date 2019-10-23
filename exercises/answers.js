@@ -19,7 +19,7 @@ let num;
 logOddNumbers(num);
 
 // Question 3
-function area (length, width){
+function area(length, width){
   length;
   width;
   let area = length * width;
@@ -32,7 +32,7 @@ area(25.75, 42);
 
 
 // Question 4
-let triangle = function(angle1 , angle2){
+function triangle(angle1 , angle2){
   let degree = angle1 + angle2;
   let angle3 = 180 - degree;
   console.log(angle3);
@@ -57,9 +57,20 @@ diameterFromArea(10);
 diameterFromArea(100);
 
 // Question 6
-function totalPrice() {
 
+function totalPrice(price, tax){ 
+  let percent = 10 / 100;
+  tax =  price * percent;
+  let priceTotal = price + tax;
+  console.log(priceTotal);
+  return (priceTotal);
+  
 }
+
+totalPrice(100, 5);
+totalPrice(250, 20);
+totalPrice(1, 18);
+
 
 // Question 7
 function shortLongShort() {
