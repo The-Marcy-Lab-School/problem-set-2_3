@@ -32,17 +32,17 @@ function diameterFromArea(area) {
 
 // Question 6
 function totalPrice(price, percentage) {
-  let total = price + (price / 100 * percentage);
-  console.log(total);
+  let total = price + (percentage / 100 * price);
+  return total;
 }
 
 // Question 7
 function shortLongShort(string1, string2) {
   if (string1.length > string2.length) {
-    console.log(`${string2}${string1}${string2}`);
+    return `${string2}${string1}${string2}`;
   }
   else if (string1.length < string2.length) {
-    console.log(`${string1}${string2}${string1}`);
+    return `${string1}${string2}${string1}`;
   }
 }
 
