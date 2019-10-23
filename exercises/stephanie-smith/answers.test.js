@@ -16,7 +16,7 @@ test('Question 2: logOddNumbers should return undefined', () => {
 test(`Question 3: area`, () => {
   expect(answers.area(5, 7)).toBe(35);
   expect(answers.area(15, 10)).toBe(150);
-  expect(answers.area(25.75, 4)).toBe(1081.5);
+  expect(answers.area(25.75, 42)).toBe(1081.5);
 });
 
 // Question 4
@@ -36,7 +36,7 @@ test(`Question 5: diameterFromArea`, () => {
 // Question 6
 test('Question 6: totalPrice', () => {
   expect(answers.totalPrice(100, 5)).toBe(105);
-  expect(answers.totalPrice(250, 20)).toBe(130);
+  expect(answers.totalPrice(250, 20)).toBe(300);
   expect(answers.totalPrice(1, 18)).toBe(1.18);
 });
 

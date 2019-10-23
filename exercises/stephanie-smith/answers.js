@@ -7,7 +7,7 @@ function greet(name) {
 function logOddNumbers() {
   for(let num = 0; num < 100; num++) {
     if (num % 2 !== 0) {
-      return num;
+      console.log(num);
     }
   }
 }
@@ -100,6 +100,7 @@ function stringy(num) {
   }
   return string;
 }
+
 // Do NOT touch or write anything below this line
 module.exports = {
   greet,
