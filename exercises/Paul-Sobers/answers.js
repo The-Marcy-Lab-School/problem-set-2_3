@@ -121,7 +121,7 @@ function multisum(num){
     else{
       counter += 1;
     }
-   } console.log(sum);
+   } return sum;
   
 }
 multisum(13);
@@ -130,18 +130,27 @@ multisum(1000);
 
 // Question 11
 function asciiValue (value){
- for (let i= 0; i < value.length; i += 1) {
-    value.charAt(i);
-    console.log(value.charAt(i));
- }
+    let totalVal = 0;
+  for (let i= 0; i < value.length; i += 1) {  
+   totalVal +=  value.charCodeAt(i);
+   
+
+ } return totalVal;
 
 }
 asciiValue("Four score");
 
 // Question 12
-function stringy() {
-
+function stringy(num){
+  num = 0;
+  length = "1" + "0";
+  hey = num + length
+  last_num = num + hey
+ return last_num;
+  
+  
 }
+stringy(6);
 
 // Do NOT touch or write anything below this line
 module.exports = {
