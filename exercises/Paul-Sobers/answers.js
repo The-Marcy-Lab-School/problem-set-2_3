@@ -142,15 +142,22 @@ asciiValue("Four score");
 
 // Question 12
 function stringy(num){
-  num = 0;
-  length = "1" + "0";
-  hey = num + length
-  last_num = num + hey
- return last_num;
-  
-  
+  let total= "";
+  for (let i =0; total.length < num ; i+= 1){
+   
+    if (i % 2 === 0){
+      total += "1";
+    } else {
+      total += "0";
+    }
+
+  } return total;
 }
 stringy(6);
+stringy(9);
+stringy(7);
+stringy(4);
+
 
 // Do NOT touch or write anything below this line
 module.exports = {
