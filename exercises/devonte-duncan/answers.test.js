@@ -16,7 +16,7 @@ test('Question 2: logOddNumbers should return undefined', () => {
 test(`Question 3: area`, () => {
   expect(answers.area(5, 7)).toBe(35);
   expect(answers.area(15, 10)).toBe(150);
-  expect(answers.area(25.75)).toBe(1081.5);
+  expect(answers.area(25.75, 42)).toBe(1081.5);
 });
 
 // Question 4
@@ -36,7 +36,7 @@ test(`Question 5: diameterFromArea`, () => {
 // Question 6
 test('Question 6: totalPrice', () => {
   expect(answers.totalPrice(100, 5)).toBe(105);
-  expect(answers.totalPrice(250, 20)).toBe(130);
+  expect(answers.totalPrice(250, 20)).toBe(300);
   expect(answers.totalPrice(1, 18)).toBe(1.18);
 });
 
@@ -52,7 +52,9 @@ test('Question 8: describeAge', () => {
   expect(answers.describeAge(11)).toBe("You're a kid.");
   expect(answers.describeAge(13)).toBe("You're a teenager.");
   expect(answers.describeAge(19)).toBe("You're an adult.");
+  expect(answers.describeAge(18)).toBe("You're an adult.");
   expect(answers.describeAge(64)).toBe("You're an adult.");
+  expect(answers.describeAge(99)).toBe("You're an elderly.");
 });
 
 // Question 9
@@ -70,7 +72,7 @@ test('Question 9: isLeapYear', () => {
 test('Question 10: multisum', () => {
   expect(answers.multisum(13)).toBe(45);
   expect(answers.multisum(17)).toBe(60);
-  expect(answers.multisum(1000)).toBe(235168);
+  expect(answers.multisum(1000)).toBe(234168);
 });
 
 

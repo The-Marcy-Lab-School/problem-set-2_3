@@ -1,69 +1,54 @@
-let user;
-let counter = 0;
-let angleThree;
-let total;
-let taxRate;
-let stringOutput;
-
-function greet(user){
-    user = prompt("What is your name?");
-    alert("Good morning" + " " + user);
-}
+let greet = function(user){
+    return "Good morning," + " " + user + "!";
+};
 
 
 
-function logOddNumbers(){
+let logOddNumbers = function(){
+    let counter = 0;
     while(counter <= 99){
         counter += 1;
         if (counter % 2 !== 0){
             console.log(counter);
         }
     }
-}
+};
+
+
+let area = function(length, width){
+   let surfaceArea = length * width;
+   return surfaceArea; 
+};
 
 
 
-function findArea(length, width){
-   length = prompt("What is the length?");
-   width = prompt("What is the width?")
-   let area = (+length) * (+width);
-   alert(area);
-   return area; 
-}
-
-
-
-function otherAngle(angleOne, angleTwo){
-    angleOne = +prompt("What is the first angle?");
-    angleTwo = +prompt("What is the second angle");
+let otherAngle = function(angleOne, angleTwo){
+    let angleThree;
     angleThree = 180 - (angleOne + angleTwo);
-    alert(angleThree);
     return angleThree;
-}
+};
 
 
 
-function diameterFromArea(area){
-    area = +prompt("What is the area of the circle?");
+let diameterFromArea = function(area){
     let diameter = (2* Math.sqrt(area/Math.PI));
     alert(diameter);
     return diameter;
-}
+};
 
 
 
-function totalPrice(subtotal, tax){
-   taxRate = 8/100;
-   subtotal = +prompt("What is your subtotal?");
-   tax = subtotal*taxRate;
-   total = tax + subtotal;
-   alert("Your total is : $" + total);
+let totalPrice = function(subtotal, tax){
+   let total;
+   tax_amount = subtotal * (tax / 100);
+   total = tax_amount + subtotal;
+   
    return total;
-}
+};
 
-function shortLongShort(stringOne, stringTwo){
-    stringOne = prompt("Type anything!");
-    stringTwo = prompt("Type anything one more time!");
+let shortLongShort = function(stringOne, stringTwo){
+    
+    let stringOutput;
     
     if(stringOne.length <= stringTwo.length){
         
@@ -72,20 +57,85 @@ function shortLongShort(stringOne, stringTwo){
         stringOutput = stringTwo + stringOne + stringTwo;
         
     }
-    alert(stringOutput);
     return stringOutput;
-}
+};
 
-function describeAge(age){
-    age = +prompt("What is your age?");
+let describeAge = function(age){
     
-    age <= 12 ? alert("You're a kid.")
-   :age <= 17 && age > 12 ? alert("You're a teen")
-   :age => 18 && age < 65 ? alert("You're an adult")
-   :alert("You're elderly");
+   let desc =  age <= 12 ? "You're a kid."  //Tests if age is a kids age
+   :age <= 17 ? "You're a teenager."        //Tests if age is a teenager age
+   :age <= 65 && age >= 18  ? "You're an adult."  //Tests if age is a adult age
+   : "You're an elderly.";                       //Tests if age is elderly age
+   return desc;
     
+};
+
+let isLeapYear = function(year){
+   if(year % 4 === 0 && year % 100 !== 0){
+       return true;
+   }else if(year % 100 === 0 && year % 400 !== 0){
+       return false;
+   }else if(year % 4 === 0){
+       return true;
+   }else{
+       return false;
+   }
+};
+
+let multisum = function(number){
+    let sum = 0;
+    for(let i = 1; i <= number; i++){
+      
+       if(i % 3 === 0 || i % 5 === 0){
+         sum = sum + i;  
+       }
+      }
+       return sum;
+    };
     
-}
+    let asciiValue = function(string){
+    let sum = 0;
+    let asciiValues;
+    
+        for(let i = 0; i <= string.length - 1; i++){
+          asciiValues = string.charCodeAt(i)
+          sum = sum + asciiValues;
+          }
+        return sum;
+};
+
+let stringy = function(maxLength){
+    let string = "";
+    
+        for(let i = 1; i < maxLength*0.5 + 1 ; i++){
+          
+          string = string + "1";
+          
+        if(string.length < maxLength){
+            
+           for(let j = 0; j < 1; j++){
+            
+             string = string + "0";
+          }
+         }
+        }
+    
+    return string;
+};
 
 
-
+// Do NOT touch or write anything below this line
+module.exports = {
+  greet,
+  logOddNumbers,
+  area,
+  otherAngle,
+  diameterFromArea,
+  totalPrice,
+  shortLongShort,
+  describeAge,
+  isLeapYear,
+  multisum,
+  asciiValue,
+  stringy,
+};
