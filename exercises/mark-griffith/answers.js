@@ -52,18 +52,16 @@ function shortLongShort(str1,str2) {
   let string = "";
    if(str1.length > str2.length){
      string = str2 + str1 + str2;
-     return string;
    }
    else{
      string = str1 + str2 + str1;
-     return string;
    }
+    return string;
 }
 
 // Question 8
 function describeAge(age) {
-  let desc = (age <= 12) ? "You're a kid." : (age >= 13 && age <= 17) ? "You're a teenager." : (age >= 18 && age <= 64) ? "You're an adult." : "You're an elderly.";
-  return desc;
+  return age > 65 ? "You are an elderly? " : age > 18 ? "You are a teenager?" : "You are a kid.";//removes unneeded conditionals, thanks for the catch.
 }
 
 // Question 9
@@ -81,13 +79,10 @@ function multisum(num) {
   let i = 0;
   let sum = 0;
   while(i <= num){
-    if( i % 3 ===0 || i % 5 === 0){
+    if( i % 3 === 0 || i % 5 === 0){
      sum += i;
-     i++;
   }
-  else{
-    i++;
-  }
+  i++;
 }
   return sum;
 }
