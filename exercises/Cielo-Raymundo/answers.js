@@ -1,7 +1,6 @@
 // Question 1
 function greet(name) {
-  let answer=name;
-  return(`Good morning, ${answer}!`);
+  return("Good morning, " + name +"!");
 }
 
 // Question 2
@@ -20,10 +19,7 @@ function area(length, width) {
 
 // Question 4
 function otherAngle(angle, angle2) {
-  let angle3;
-  if(angle>0&&angle2>0){
-    angle3= 180-(angle + angle2);
-  }
+  let angle3 = 180-(angle + angle2);
   return angle3;
 }
 
@@ -43,27 +39,22 @@ function totalPrice(price, tax) {
 
 // Question 7
 function shortLongShort(string1, string2) {
-  let long="";
-  let short="";
   if (string1.length>string2.length){
-    long = string1;
-    short=string2;
+    return (string2+string1+string2);
   }else{ 
-    short=string1;
-    long=string2;
+    return (string1+string2+string1);
   }
-  return (`${short}${long}${short}`);
 }
 
 // Question 8
 function describeAge(age) {
-  return(age<=12? "You're a kid.": age>=13&&age<=17? "You're a teenager.":age>=18&&age<=64? "You're an adult.":"You're an elderly.");
+  return age > 64 ? "You're an elderly" : age > 18 ? "You're an adult" : age > 13 ? "You're a teenager" : "You're a kid";
 }
 
 // Question 9
 function isLeapYear(year) {
   if(year>0){
-    return (year%4===0&&year%100!==0? true: year%100===0&& year%400===0? true: false);
+    return (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
   }
 }
 
@@ -90,17 +81,15 @@ function asciiValue(string){
 // Question 12
 function stringy(length) {
   // write your answer to question one below
-  let count=1;
+  let count=0;
   let string='';
-  length+=1;
     
   while(count<length){
+    count+=1;
     if(count%2==0){
       string+='0';
-      count+=1;
     }else{
       string+='1';
-      count+=1;
     }
   }
   return string;
