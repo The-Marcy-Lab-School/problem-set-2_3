@@ -9,30 +9,22 @@ function logOddNumbers() {
   for(let i = 0; i <= 99; i++)
   if(i % 2 ==! 0){
     console.log(i);
-  }else{
-    
   }
-
 }
 
 // Question 3
 function area(x, y) {
-  return (x * y); 
+  return x * y; 
 }
 
 // Question 4
 function otherAngle(angle1, angle2) {
-  let angles = angle1 + angle2; 
-  return (180 - angles); 
-
+  return 180 - angle1 - angle2; 
 }
 
 // Question 5
 function diameterFromArea(area) {
-  let divide = (area / Math.PI);
-  let root = Math.sqrt(divide);
-  let diameter = (root * 2); 
-  return diameter;
+  return ((Math.sqrt(area / Math.PI)) * 2);
 }
 
 
@@ -86,12 +78,10 @@ function stringy(num) {
 
   do {  
     if (i % 2 == 0){
-      let addOne = string + "1";
-      string = addOne
+      string = string + "1";
       i = i + 1
     }else{
-      let addZero = string + "0";
-      string = addZero
+      string = string + "0";
       i = i + 1
     }
     
