@@ -1,6 +1,6 @@
 // Question 1
 function greet(name) {
-  return "Good morning," + " " + name + "!";
+  return `Good morning, ${name}!`;
 }
 greet("Carmen!");
 greet("Devonte");
@@ -20,10 +20,7 @@ logOddNumbers(num);
 
 // Question 3
 function area(length, width){
-  length;
-  width;
-  let area = length * width;
-  return(area);
+ return length * width;
 }
 
 area(5, 15);
@@ -33,10 +30,7 @@ area(25.75, 42);
 
 // Question 4
 function otherAngle(angle1 , angle2){
-  let degree = angle1 + angle2;
-  let angle3 = 180 - degree;
-  console.log(angle3);
-  return angle3;
+ return 180 - angle1 - angle2;
   
 }
 
@@ -47,10 +41,7 @@ otherAngle(10, 20);
 
 // Question 5
 function diameterFromArea(num){
- let diameter = 2 * Math.sqrt(num / Math.PI);
-  console.log(diameter);
-  return diameter;
-  
+  return 2 * Math.sqrt(num / Math.PI);
 }
 
 diameterFromArea(10);
@@ -60,10 +51,7 @@ diameterFromArea(100);
 
 function totalPrice(price, tax){ 
  let after_tax = price * tax / 100;
-  let priceTotal = price + after_tax;
-  console.log(priceTotal);
-  return priceTotal;
-  
+  return price + after_tax;
 }
 
 totalPrice(100, 5);
@@ -75,8 +63,8 @@ totalPrice(1, 18);
 function shortLongShort(input1 , input2){
   if (input1.length < input2.length) {
     return input1 + input2 + input1;
-  } else if(input1.length > input2.length){
-      return input2 + input1 + input2;
+  } else {
+   return input2 + input1 + input2;
     }
 }
 
@@ -86,8 +74,7 @@ shortLongShort('', 'xyz');
 
 // Question 8
 function describeAge(age) {
-   let ageNum = (age <= 12) ? "You're a kid." : (age >= 13 && age <= 17) ? "You're a teenager." : (age >= 18 && age <= 64) ? "You're an adult." : "You're an elderly.";
-    return (ageNum);
+  return age > 64 ? "You're an elderly" : age > 18 ? "You're an adult": age > 13 ? "You're a teenager": "You're a kid";
 }
 describeAge(2);
 describeAge(21);
@@ -97,8 +84,7 @@ describeAge(64);
 
 // Question 9
 function isLeapYear(year) {
-  let leapYear = year % 4 === 0 && year % 100 != 0 || year % 400 === 0;
-  return(leapYear);
+ return (year % 4 === 0 && year % 100 !== 0 ) || (year % 400 === 0);
 }
 
 isLeapYear(2016);
@@ -109,34 +95,29 @@ isLeapYear(1752);
 isLeapYear(1700); 
 
 // Question 10
-function multisum(num){
+function multisum(num) {
   let counter =0; 
   let sum = 0;
-  while (counter <= num ){
+  while (counter <= num ) {
      if (counter % 3 === 0 || counter % 5 === 0){
        sum += counter;
-       counter += 1;
-       
-     } 
-    else{
-      counter += 1;
-    }
-   } return sum;
-  
+  } 
+  counter += 1;
+ }
+ return sum;
 }
+
 multisum(13);
 multisum(17);
 multisum(1000);
 
 // Question 11
 function asciiValue (value){
-    let totalVal = 0;
-  for (let i= 0; i < value.length; i += 1) {  
-   totalVal +=  value.charCodeAt(i);
-   
-
- } return totalVal;
-
+  let totalVal = 0;
+  for (let i= 0; i < value.length; i += 1){  
+    totalVal +=  value.charCodeAt(i);
+ } 
+  return totalVal;
 }
 asciiValue("Four score");
 
