@@ -1,6 +1,6 @@
 // Question 1
 function greet(name) {
-  return(`Good Morning ${name}`);
+  return `Good Morning ${name}`;
 }
 
 // Question 2
@@ -12,26 +12,22 @@ function logOddNumbers() {
 
 // Question 3
 function area(length, width) {
-  rect_area = length * width;
-  return(rect_area);
+  return length * width;
 }
 
 // Question 4
 function otherAngle(first_angle, second_angle){
-  third_angle = 180 - (first_angle + second_angle);
-  return(third_angle);
+  return 180 - (first_angle + second_angle);
 }
 
 // Question 5
 function diameterFromArea(area){
-  diameter = 2 * (Math.sqrt((area/Math.PI)));
-  return(diameter);
+  return 2 * (Math.sqrt((area/Math.PI)));
 }
 
 // Question 6
 function totalPrice(bill, tax){
-  total_price = bill + (bill * (tax/100));
-  return(total_price);
+  return bill + (bill * (tax/100));
 }
 
 // Question 7
@@ -47,25 +43,13 @@ function shortLongShort(first, second) {
 // Question 8
 function describeAge(age){
   let message = "";
-  message = (age <= 12) ? "You're a kid": (age >= 13 && age <=17) ? "You're a teenager" :  (age >= 18 && age <= 64) ? "You're an adult":  (age >= 65) ? "You're an elderly": false
-  return(message);
+  return age <= 12 ? "You're a kid": age <=17 ? "You're a teenager" :  age <= 64 ? "You're an adult":  age >= 65 ? "You're an elderly": false
+  
 }
 
 // Question 9
 function isLeapYear(year) {
-  if((year/4) == 0 && (year/100)!== 0 ){
-    year = true; 
-  }
-  else if((year/100 ) == 0 && (year/400 ) == 0 ){
-    year = true;
-  }
-  else if((year/100)== 0){
-    year = false;
-  }
-  else{
-    false;
-  }
-  return year;
+  return ((year % 4 === 0 && year % 100 !== 0) || year % 400 == 0? true: false);
 }
 
 // Question 10
