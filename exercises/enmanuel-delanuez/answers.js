@@ -92,6 +92,8 @@ function stringy(int) {
   return finalString;
 }
 
+logOddNumbers();
+
 // Do NOT touch or write anything below this line
 module.exports = {
   greet,
