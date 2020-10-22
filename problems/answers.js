@@ -59,7 +59,6 @@ function stringy() {
 }
 
 // Do NOT touch or write anything below this line
-(function(){
   module.exports = {
     greet,
     logOddNumbers,
@@ -74,5 +73,6 @@ function stringy() {
     asciiValue,
     stringy,
   };
-})();
+
+
 
