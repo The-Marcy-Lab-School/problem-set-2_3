@@ -8,12 +8,22 @@ test('Question 1: greet', () => {
 });
 
 // Question 2
-test('Question 2: logOddNumbers should log to the console', () => {
+test('Question 2: logOddNumbers should log odd numbers to the console', () => {
   global.console = { log: jest.fn() };
   answers.logOddNumbers();
   expect(global.console.log).toHaveBeenCalledWith(1);
+  expect(global.console.log).toHaveBeenCalledWith(3);
+  expect(global.console.log).toHaveBeenCalledWith(5);
   expect(global.console.log).toHaveBeenCalledWith(99);
-}); 
+});
+
+// Question 2
+test('Question 2: logOddNumbers should not log even numbers to the console', () => {
+  global.console = { log: jest.fn() };
+  answers.logOddNumbers();
+  expect(global.console.log).not.toHaveBeenCalledWith(2);
+  expect(global.console.log).not.toHaveBeenCalledWith(4);
+});
 
 // Question 2
 test('Question 2: logOddNumbers should return undefined', () => {
